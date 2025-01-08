@@ -1,6 +1,7 @@
 <x-app-layout>
     <x-slot name="header">
         <h2 class="font-semibold text-xl text-red-900 leading-tight">
+            <i class="fas fa-users mr-2"></i>
             {{ __('Edit Academician') }}
         </h2>
     </x-slot>

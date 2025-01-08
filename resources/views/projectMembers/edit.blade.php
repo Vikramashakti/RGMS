@@ -1,6 +1,7 @@
 <x-app-layout>
     <x-slot name="header">
         <h2 class="font-semibold text-xl text-yellow-800 dark:text-yellow-200 leading-tight">
+            <i class="fas fa-users-cog mr-2"></i>
             {{ __('Edit Project Member') }}
         </h2>
     </x-slot>

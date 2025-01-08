@@ -1,6 +1,7 @@
 <x-app-layout>
     <x-slot name="header">
         <h2 class="font-semibold text-xl text-blue-800 dark:text-blue-200 leading-tight">
+            <i class="fas fa-graduation-cap mr-2"></i>
             {{ __('Create Research Grant') }}
         </h2>
     </x-slot>

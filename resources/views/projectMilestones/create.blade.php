@@ -1,6 +1,7 @@
 <x-app-layout>
     <x-slot name="header">
-        <h2 class="font-semibold text-xl text-gray-800 dark:text-gray-200 leading-tight">
+        <h2 class="font-semibold text-xl text-green-800 dark:text-green-200 leading-tight">
+            <i class="fas fa-tasks mr-2"></i>
             {{ __('Add Project Milestone') }}
         </h2>
     </x-slot>
