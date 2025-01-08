@@ -9,7 +9,7 @@ use App\Http\Controllers\ProjectMemberController;
 
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('auth/login');
 });
 
 Route::get('/dashboard', function () {
