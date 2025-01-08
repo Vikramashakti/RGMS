@@ -137,7 +137,7 @@ class ProjectMemberController extends Controller
         }
 
         $projectMember->delete();
-        return redirect()->route('projectMembers.index')->with('success', 'Umbe');
+        return redirect()->route('projectMembers.index')->with('success', 'Project member deleted successfully');
     }
 }
 
