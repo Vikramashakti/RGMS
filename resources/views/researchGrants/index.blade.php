@@ -21,6 +21,7 @@
                                 <th class="px-6 py-3">Grant Amount</th>
                                 <th class="px-6 py-3">Start Date</th>
                                 <th class="px-6 py-3">Duration (Months)</th>
+                                <th class="px-6 py-3">Deadline</th>
                                 <th class="px-6 py-3">Actions</th>
                             </tr>
                         </thead>
@@ -32,6 +33,11 @@
                                     <td class="px-6 py-4 text-sm">${{ number_format($grant->grant_amount, 2) }}</td>
                                     <td class="px-6 py-4 text-sm">{{ \Carbon\Carbon::parse($grant->start_date)->format('M d, Y') }}</td>
                                     <td class="px-6 py-4 text-sm">{{ $grant->duration_months }}</td>
+                                    <td class="px-6 py-4 text-sm">
+                                        <span class="text-red-600 dark:text-red-400 font-semibold">
+                                            {{ \Carbon\Carbon::parse($grant->start_date)->addMonths($grant->duration_months)->format('M d, Y') }}
+                                        </span>
+                                    </td>
                                     <td class="px-6 py-4 text-sm flex space-x-4">
                                         <a href="{{ route('researchGrants.show', $grant->id) }}" class="px-3 py-1 bg-blue-500 text-white rounded-lg hover:bg-blue-600">
                                             View
