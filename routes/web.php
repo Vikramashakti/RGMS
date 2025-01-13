@@ -6,6 +6,9 @@ use App\Http\Controllers\AcademicianController;
 use App\Http\Controllers\ResearchGrantController;
 use App\Http\Controllers\ProjectMilestoneController;
 use App\Http\Controllers\ProjectMemberController;
+use App\Models\Academician;
+use App\Models\ResearchGrant;
+use App\Models\ProjectMilestone;
 
 
 Route::get('/', function () {
@@ -13,7 +16,11 @@ Route::get('/', function () {
 });
 
 Route::get('/dashboard', function () {
-    return view('dashboard');
+    $academiciansCount = Academician::count();
+    $researchGrantsCount = ResearchGrant::count();
+    $projectMilestonesCount = ProjectMilestone::count();
+
+    return view('dashboard', compact('academiciansCount', 'researchGrantsCount', 'projectMilestonesCount'));
 })->middleware(['auth', 'verified'])->name('dashboard');
 
 Route::middleware('auth')->group(function () {
